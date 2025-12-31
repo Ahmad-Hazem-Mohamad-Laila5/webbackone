@@ -15,10 +15,8 @@ connectDB();
 connectCloudinary();
 // middlewares
 app.use(express.json());
-app.use(cors({
-  origin: ["http://localhost:3001", "http://localhost:3002"], // أضف بورت الأدمن والفرونت المحلي
-  credentials: true
-}));
+app.use(cors());
+
 // api endpoints
 app.use('/api/user',userRouter)
 app.use("/api/product", productRouter);
